@@ -1,0 +1,7 @@
+.nearby__events{
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    padding: 1rem 2rem; 
+    width: 80%;
+}
