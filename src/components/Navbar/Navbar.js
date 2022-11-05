@@ -1,3 +1,4 @@
+import Button from 'react-bootstrap/Button'
 import React from 'react'
 import './Navbar.css'
 const Navbar = () => {
@@ -10,6 +11,7 @@ const Navbar = () => {
             <li className="navbar__list--item">Map</li>
             <li className="navbar__list--item">Log In</li>
         </ul>
+        <Button variant="danger">Hello</Button>
     </nav>
     </>
   )

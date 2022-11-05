@@ -1,5 +1,30 @@
 .navbar{
     background-color: black;
-    
+    color: white;
 
+}
+.navbar__list{
+    margin: 0;
+    padding:2rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+.navbar__list--item{
+    font-size: 1.4rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.navbar__list--item::after{
+    display: block;
+    width: 0;
+    height: .5rem;
+    content: '';
+    transition: all .3s;
+
+}
+.navbar__list--item:hover .navbar__list--item::after{
+ width: 100%;
 }
