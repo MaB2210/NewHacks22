@@ -1,39 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}/*
------------------------------------------------------- */
-/* 
-.canvas {
-background: radial-gradient(#87abe3, #fcf7f4);
-}
-
-.wrapper {
-max-width: 75%;
-margin: auto;
-}
-
-.header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-} */
-
-
-
-/* 
------------------------------------------------------------- */
-body{
-font-family: 'Poppins', sans-serif;
-}
-a{
-  text-decoration: none;
-  color: #555;
-}
-
-p{
-  color: #555;
+.home_intro p {
+  font-size: 2rem;
 }
 
 .wrapper {
@@ -43,24 +9,24 @@ p{
   padding-right: 25px;
 }
 
-.row{
+.home{
     display: flex;
     align-items: center;        
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.col{
+.home_intro{
   flex-basis: 50%;
   min-width: 300px;
 }
 
-.col img{
+.home_intro img{
   max-width: 100%;
   padding: 50px 0;
 }
 
-.col h1{
+.home_intro h1{
   font-size: 50px;
   line-height: 60px;
   margin: 25px 0;
@@ -68,22 +34,25 @@ p{
 
 .button{
 display:inline-block;
-background: #219EBC;
+background: #023047;
 color:#fff;
-padding:8px 30px;
+padding: 16px 30px;
 margin:30px 0;
 border-radius:30px;
+font-size: 1.5rem;
 }
 
 .button:hover{
-  background: #8ECAE6;
-  color: #fcf7f4;
+  background: #fff;
+  color: #023047;
 }
+
+
 
 .canvas{
   background: (#87abe3);
 }
 
-.canvas .row{
+.canvas .home{
   margin-top: 70px;
 }
