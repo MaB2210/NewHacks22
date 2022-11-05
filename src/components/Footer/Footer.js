@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
       <div className='footer'>
-      <p class="person">
+      <div className="person">
         <h2>Mann Bhatt</h2>
         <div className='linkedin'>
           <a href ="https://www.linkedin.com/in/mann-bhatt-781327147/"><img src={lkdinlogo} />  </a>
@@ -16,8 +16,8 @@ const Footer = () => {
           <a href ="https://github.com/MaB2210"><img src={githublogo} /> </a>  
         </div>
         
-      </p>
-      <p class="person">
+      </div>
+      <div className="person">
         <h2>Evan Song</h2>
         <div className='linkedin'>
           <a href ="https://www.linkedin.com/in/evan-song-7652a620a/"><img src={lkdinlogo} />  </a>
@@ -27,8 +27,8 @@ const Footer = () => {
           <a href ="https://github.com/evnsng"><img src={githublogo} /></a>  
         </div>
         
-      </p>
-      <p class="person">
+      </div>
+      <div className="person">
         <h2>Kaushal Luffa</h2>
         <div className='linkedin'>
           <a href ="https://linkedin.com/in/kaushalluffa"><img src={lkdinlogo} />  </a>
@@ -38,8 +38,8 @@ const Footer = () => {
           <a href ="https://github.com/kaushalluffa"><img src={githublogo} /> </a>  
         </div>
         
-      </p>
-      <p class="person">
+      </div>
+      <div className="person">
         <h2>Arjun Sohal</h2>
         <div className='linkedin'>
           <a href ="https://www.linkedin.com/in/arjun-sohal-8401bb253/"><img src={lkdinlogo} />  </a>
@@ -49,7 +49,7 @@ const Footer = () => {
           <a href ="https://github.com/arjunsohal12"><img src={githublogo} /> </a>  
         </div>
         
-      </p>
+      </div>
 
 
       </div>
