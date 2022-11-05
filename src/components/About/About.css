@@ -1,0 +1,70 @@
+.home_intro p {
+  font-size: 2rem;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.home{
+    display: flex;
+    align-items: center;        
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.home_intro{
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.home_intro img{
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.home_intro h1{
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.button{
+display:inline-block;
+background: #023047;
+color:#fff;
+padding: 16px 30px;
+margin:30px 0;
+border-radius:30px;
+font-size: 1.5rem;
+}
+
+.button:hover{
+  background: #fff;
+  color: #023047;
+}
+
+.canvas{
+  background: (#87abe3);
+}
+
+.canvas .home{
+  margin-top: 70px;
+}
+
+.home_About {
+  background-color: #023047;
+  color: #fff;
+  font-size: 3rem;
+  text-align:center;
+  border-radius: 20px;
+  padding: 1rem 7rem;
+}
+
+.About_txt {
+  line-height: 1.5;
+  text-align: justify;
+}
