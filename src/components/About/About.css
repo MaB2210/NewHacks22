@@ -47,12 +47,24 @@ font-size: 1.5rem;
   color: #023047;
 }
 
-
-
 .canvas{
   background: (#87abe3);
 }
 
 .canvas .home{
   margin-top: 70px;
+}
+
+.home_About {
+  background-color: #023047;
+  color: #fff;
+  font-size: 3rem;
+  text-align:center;
+  border-radius: 20px;
+  padding: 1rem 7rem;
+}
+
+.About_txt {
+  line-height: 1.5;
+  text-align: justify;
 }

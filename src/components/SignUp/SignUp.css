@@ -1,10 +1,10 @@
-.login__container {
+.signup__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10rem;
+  padding-top: 8rem;
 }
-.login__card {
+.signup__card {
     border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -16,10 +16,10 @@
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.14);
 }
-.login__card--heading {
+.signup__card--heading {
   font-size: 2rem;
 }
-.login__card--form {
+.signup__card--form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -34,20 +34,7 @@ input {
   border-radius: 1rem;
 }
 
-.login {
-  color: white;
-  background-color: blue;
-  font-size: 1.4rem;
-  border-radius: 1rem;
-  padding: 1rem 1.5rem;
-  transition: all .3s;
-  cursor: pointer;
-}
-.login:hover{
-  background-color:darkblue;
-}
-
-.signin {
+.signup {
   color: white;
   background-color: green;
   font-size: 1.4rem;
@@ -56,6 +43,18 @@ input {
   cursor: pointer;
   transition: all .3s;
 }
-.signin:hover{
-  background-color:darkgreen;
+.signup:hover{
+    background-color:darkgreen;
+    color: white;
+}
+.login {
+  color: white;
+  background-color: blue;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  transition: all .3s;
+}
+.login:hover{
+    background-color:darkblue;
 }
