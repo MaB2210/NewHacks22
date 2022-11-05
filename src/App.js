@@ -18,6 +18,7 @@ function App() {
         <Route path="/events" element={<Event/>} />
       </Routes>
       <Footer/>
+      
     </div>
   );
 }

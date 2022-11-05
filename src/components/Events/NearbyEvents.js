@@ -9,7 +9,7 @@ const NearbyEvents = ({ events }) => {
           {events?.date || "Nov 16, 2022"}, {events?.time || "6 PM"}
         </p>
         <p className="sm__msg">Click Join for more info</p>
-        <button>Join</button>
+        <button className="join">Join</button>
       </div>
     </>
   );

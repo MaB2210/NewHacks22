@@ -20,12 +20,11 @@ const Event = () => {
           </div>
           <div className="events__nearby">
             <h3 className="events__heading">See Nearby Events</h3>
-            {/* {eventsNearby?.length >= 1 ? (
+            {eventsNearby?.length >= 1 ? (
               <NearbyEvents events={eventsNearby} />
             ) : (
               <Loading />
-            )} */}
-            <NearbyEvents/>
+            )}
           </div>
         </div>
       </div>
