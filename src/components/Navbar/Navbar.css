@@ -16,6 +16,7 @@
     font-size: 1.4rem;
     margin-right: 2rem;
     cursor: pointer;
+    position: relative;
 }
 .navbar__list--item::after{
     display: block;
@@ -23,8 +24,11 @@
     height: .5rem;
     content: '';
     transition: all .3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
 }
-.navbar__list--item:hover .navbar__list--item::after{
+.navbar__list--item:hover::after{
  width: 100%;
 }

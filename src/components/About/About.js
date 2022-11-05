@@ -1,25 +1,24 @@
 import React from 'react'
 import './About.css'
+import logo from '../../Assets/Image/Home-AboutUS.jpg'
 const About = () => {
   return (
     <div>
-        <div-card>
-            <h1> Are you Bored?</h1>
-            <h2> Have a look at what's happening around</h2>
-        </div-card>
 
-        <div-about>
-            <h2>What is Project</h2>
-            <h4>
-                If you're bored & Don't konw what to do
-                Have a look at the events happening around you
-            </h4>
-            <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </div-about>
-       
-        
+<div className="canvas">
+        <div className="wrapper">
+            <div className="row">
+                    <div className="col">
+                        <h1>Are you bored<br/> get yorself participated</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br/>culpa enim ut fugit neque architecto</p>
+                        <button className="button">Checkout Events &#8594;</button>
+                    </div>
+                    <div className="col">
+                        <img src={logo} />
+                    </div>
+            </div>
+        </div>
+    </div>
     </div>
   )
 }

@@ -1,5 +1,89 @@
-div  {
-  /* background-image: url("paper.gif"); */
-  
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*
+------------------------------------------------------ */
+/* 
+.canvas {
+background: radial-gradient(#87abe3, #fcf7f4);
+}
+
+.wrapper {
+max-width: 75%;
+margin: auto;
+}
+
+.header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+} */
+
+
+
+/* 
+------------------------------------------------------------ */
+body{
+font-family: 'Poppins', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #555;
+}
+
+p{
+  color: #555;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;        
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col{
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col img{
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.col h1{
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.button{
+display:inline-block;
+background: #219EBC;
+color:#fff;
+padding:8px 30px;
+margin:30px 0;
+border-radius:30px;
+}
+
+.button:hover{
+  background: #8ECAE6;
+  color: #fcf7f4;
+}
+
+.canvas{
+  background: (#87abe3);
+}
+
+.canvas .row{
+  margin-top: 70px;
 }
