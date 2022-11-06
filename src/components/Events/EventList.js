@@ -8,12 +8,13 @@ const EventList = ({ events }) => {
           {events
             ? events.map((event, i) => (
                 <li className="list__name">
-                  {i + 1}. {event.name}{" "}
+                  {i + 1}. {event.name}
                   <button className="show__saved">Info</button>
                 </li>
               ))
             : "Loading"}
         </ul>
+
       </div>
     </>
   );
