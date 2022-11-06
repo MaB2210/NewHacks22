@@ -7,10 +7,6 @@ import {
  if ("geolocation" in navigator) {
    navigator.geolocation.getCurrentPosition(
      function (position) {
-    //    setUserLocation({
-    //      lat: position.coords.latitude,
-    //      long: position.coords.longitude,
-    //    });
        localStorage.setItem(
          "location",
          JSON.stringify({
