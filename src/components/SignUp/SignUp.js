@@ -1,10 +1,22 @@
 import React, { useState } from "react";
+import axios from 'axios'
 import { Link } from "react-router-dom";
 import "./SignUp.css";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCPassword] = useState("");
+  const [newUser, setNewUser] = useState({});
+  function signUp() {
+    axios
+      .post("https://newhacks22.onrender.com/create_account", {
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        setNewUser(res.data);
+      });
+  }
   return (
     <>
       <div className="signup__container">

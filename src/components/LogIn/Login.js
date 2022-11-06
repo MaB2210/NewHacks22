@@ -1,9 +1,24 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    function signInUser(){
+      axios
+        .post("https://newhacks22.onrender.com/login", {
+          email: email,
+          password: password,
+        })
+        .then((res) => {
+          setUserInLocalStorage(res.data)
+        });
+    }
+    function setUserInLocalStorage(user){
+      localStorage.setItem("user", JSON.stringify(user));
+       window.location.reload()
+    }
   return (
     <>
       <div className="login__container">
@@ -26,7 +41,7 @@ const Login = () => {
               required
               placeholder="Password"
             />
-            <button className="login">Login</button>
+            <button className="login" onClick={signInUser}>Login</button>
             <button className="signin">
               <Link to="/signup">Sign Up</Link>
             </button>
