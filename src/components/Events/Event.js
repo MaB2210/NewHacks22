@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import EventList from "./EventList";
 import Loading from "./Loading";
 import NearbyEvents from "./NearbyEvents";
@@ -7,7 +7,26 @@ import EventPopup from "./EventPopup";
 const Event = () => {
   const [savedEvents, setSavedEvents] = useState([]);
   const [eventsNearby, setEventsNearby] = useState([]);
-  const [showPopup, setShowPopup] = useState(false)
+  const [showPopup, setShowPopup] = useState(false);
+  const [userLocation, setUserLocation] = useState({ lat: "", long: "" });
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          setUserLocation({
+            lat: position.coords.latitude,
+            long: position.coords.longitude,
+          });
+        },
+        function (error) {
+          console.error("Error Code = " + error.code + " - " + error.message);
+        }
+      );
+    } else {
+      alert("Please refresh the page and allow the location");
+    }
+  }, []);
   return (
     <>
       <div className="events">
@@ -17,7 +36,7 @@ const Event = () => {
             {savedEvents?.length === 0 ? (
               <p className="message">Sorry you don't have any saved events.</p>
             ) : (
-              <EventList events={savedEvents}  />
+              <EventList events={savedEvents} />
             )}
           </div>
           <div className="events__nearby">
@@ -30,7 +49,7 @@ const Event = () => {
           </div>
         </div>
       </div>
-      {showPopup && <EventPopup closePopup={setShowPopup}/>}
+      {showPopup && <EventPopup closePopup={setShowPopup} />}
     </>
   );
 };

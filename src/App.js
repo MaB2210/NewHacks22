@@ -6,6 +6,7 @@ import Event from './components/Events/Event';
 import Footer from './components/Footer/Footer';
 import Login from './components/LogIn/Login';
 import SignUp from './components/SignUp/SignUp';
+import Map from './components/Events/Map/Map';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/events" element={<Event/>} />
-        
+        <Route path="/map" element={<Map/>} />
       </Routes>
       <Footer/>
       
