@@ -10,10 +10,8 @@ const Event = () => {
   const [eventsNearby, setEventsNearby] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [userLocation, setUserLocation] = useState({ lat: "", long: "" });
-  let userId;
-  if (localStorage.getItem("user").id) {
-    userId = localStorage.getItem("user").id;
-  }
+ 
+ 
   useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -31,29 +29,29 @@ const Event = () => {
       alert("Please refresh the page and allow the location");
     }
   }, []);
-  useEffect(() => {
-    axios
-      .get("https://newhacks22.onrender.com/return_events", { id: userId })
-      .then((res) => {
-        if (res.data.length >= 1) {
-          setSavedEvents(res.data);
-        } else {
-          return;
-        }
-      });
-  }, [userId]);
-  useEffect(() => {
-    axios
-      .get("https://newhacks22.onrender.com/event_in_range", {
-        lat: localStorage.getItem("location").lat || Math.abs(userLocation.lat),
-        lon:
-          localStorage.getItem("location").long || Math.abs(userLocation.long),
-      })
-      .then((res) => {
-        if (res.data.Events_in_range.length <= 0) return;
-        setEventsNearby(res.data);
-      });
-  }, [userLocation]);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://newhacks22.onrender.com/return_events", { id: userId })
+  //     .then((res) => {
+  //       if (res.data.length >= 1) {
+  //         setSavedEvents(res.data);
+  //       } else {
+  //         return;
+  //       }
+  //     });
+  // }, [userId]);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://newhacks22.onrender.com/event_in_range", {
+  //       lat: localStorage.getItem("location").lat || Math.abs(userLocation.lat),
+  //       lon:
+  //         localStorage.getItem("location").long || Math.abs(userLocation.long),
+  //     })
+  //     .then((res) => {
+  //       if (res.data.Events_in_range.length <= 0) return;
+  //       setEventsNearby(res.data);
+  //     });
+  // }, [userLocation]);
   return (
     <>
       <div className="events">
