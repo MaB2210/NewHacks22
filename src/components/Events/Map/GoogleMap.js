@@ -4,6 +4,29 @@ import {
   useGoogleMap,
 } from "@ubilabs/google-maps-react-hooks";
 
+ if ("geolocation" in navigator) {
+   navigator.geolocation.getCurrentPosition(
+     function (position) {
+    //    setUserLocation({
+    //      lat: position.coords.latitude,
+    //      long: position.coords.longitude,
+    //    });
+       localStorage.setItem(
+         "location",
+         JSON.stringify({
+           lat: position.coords.latitude,
+           long: position.coords.longitude,
+         })
+       );
+     },
+     function (error) {
+       console.error("Error Code = " + error.code + " - " + error.message);
+     }
+   );
+ } else {
+   alert("Please refresh the page and allow the location");
+ }
+
 const GoogleMap = () => {
   const [userLocation, setUserLocation] = useState({
     lat: parseInt(localStorage.getItem("location").lat) || 0,
