@@ -4,36 +4,36 @@ import {
   useGoogleMap,
 } from "@ubilabs/google-maps-react-hooks";
 
- if ("geolocation" in navigator) {
-   navigator.geolocation.getCurrentPosition(
-     function (position) {
-       localStorage.setItem(
-         "location",
-         JSON.stringify({
-           lat: position.coords.latitude,
-           long: position.coords.longitude,
-         })
-       );
-     },
-     function (error) {
-       console.error("Error Code = " + error.code + " - " + error.message);
-     }
-   );
- } else {
-   alert("Please refresh the page and allow the location");
- }
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(
+    function (position) {
+      localStorage.setItem(
+        "location",
+        JSON.stringify({
+          lat: position.coords.latitude,
+          long: position.coords.longitude,
+        })
+      );
+    },
+    function (error) {
+      console.error("Error Code = " + error.code + " - " + error.message);
+    }
+  );
+} else {
+  alert("Please refresh the page and allow the location");
+}
 
 const GoogleMap = () => {
   const [userLocation, setUserLocation] = useState({
     lat: parseInt(localStorage.getItem("location").lat) || 0,
     long: parseInt(localStorage.getItem("location").long) || 0,
   });
-    const {map} = useGoogleMap();
-  const markerRef = useRef()
-        useEffect(() => {
-        if (!map || markerRef.current) return;
-        markerRef.current = new window.google.maps.Marker({ map });
-        }, [map]);
+  const { map } = useGoogleMap();
+  const markerRef = useRef();
+  useEffect(() => {
+    if (!map || markerRef.current) return;
+    markerRef.current = new window.google.maps.Marker({ map });
+  }, [map]);
   useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -58,15 +58,18 @@ const GoogleMap = () => {
       alert("Please refresh the page and allow the location");
     }
   }, []);
-     useEffect(() => {
-       if (!markerRef.current) return;
-       if (isNaN(userLocation.lat) || isNaN(userLocation.long)) return;
-       markerRef.current.setPosition({
-         lat: parseInt(userLocation.lat),
-         lng: parseInt(userLocation.long),
-       });
-       map.panTo({ lat: parseInt(userLocation.lat), lng:parseInt( userLocation.long) });
-     }, [userLocation.lat, userLocation.long, map]);
+  useEffect(() => {
+    if (!markerRef.current) return;
+    if (isNaN(userLocation.lat) || isNaN(userLocation.long)) return;
+    markerRef.current.setPosition({
+      lat: parseInt(userLocation.lat),
+      lng: parseInt(userLocation.long),
+    });
+    map.panTo({
+      lat: parseInt(userLocation.lat),
+      lng: parseInt(userLocation.long),
+    });
+  }, [userLocation.lat, userLocation.long, map]);
   const mapOptions = {
     zoom: 12,
     center: {
