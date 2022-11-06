@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from '../../Assets/Image/logo.png'
 import "./Navbar.css";
 const Navbar = () => {
   const [user, setUser] = useState({});
@@ -20,6 +21,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
+        <div className="nav_logo"><img src={logo} alt="logo"/></div>
         <ul className="navbar__list">
           <li className="navbar__list--item">
             <Link to="/">Home</Link>

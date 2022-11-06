@@ -1,7 +1,14 @@
 .navbar{
     background-color: #FFB703;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
+.nav_logo{
+    width: 12rem;
+    height: 12rem;
 }
 .navbar__list{
     margin: 0;
