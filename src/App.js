@@ -16,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/events" element={<Event/>} />
+        
       </Routes>
       <Footer/>
       
