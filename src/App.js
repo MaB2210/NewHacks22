@@ -6,6 +6,7 @@ import Event from './components/Events/Event';
 import Footer from './components/Footer/Footer';
 import Login from './components/LogIn/Login';
 import SignUp from './components/SignUp/SignUp';
+import EventPopup from './components/Events/EventPopup';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/events" element={<Event/>} />
       </Routes>
       <Footer/>
+      {/* <EventPopup/> */}
     </div>
   );
 }
