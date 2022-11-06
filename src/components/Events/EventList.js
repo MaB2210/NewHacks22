@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./EventList.css";
-const EventList = ({ events }) => {
+import EventPopup from "./EventPopup";
+const EventList = ({ events,setShowPopup }) => {
+  const [showEvent, setShowEvent] = useState(false)
   return (
     <>
       <div className="event__list">
@@ -9,13 +11,14 @@ const EventList = ({ events }) => {
             ? events.map((event, i) => (
                 <li className="list__name">
                   {i + 1}. {event.name}
-                  <button className="show__saved">Info</button>
+                  <button className="show__saved" onClick={setShowEvent(true)}>Info</button>
                 </li>
               ))
             : "Loading"}
         </ul>
 
       </div>
+      {showEvent && <EventPopup closePopup={setShowEvent}/>}
     </>
   );
 };

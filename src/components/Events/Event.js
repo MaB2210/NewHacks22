@@ -3,9 +3,11 @@ import EventList from "./EventList";
 import Loading from "./Loading";
 import NearbyEvents from "./NearbyEvents";
 import "./Event.css";
+import EventPopup from "./EventPopup";
 const Event = () => {
   const [savedEvents, setSavedEvents] = useState([]);
   const [eventsNearby, setEventsNearby] = useState([]);
+  const [showPopup, setShowPopup] = useState(false)
   return (
     <>
       <div className="events">
@@ -15,7 +17,7 @@ const Event = () => {
             {savedEvents?.length === 0 ? (
               <p className="message">Sorry you don't have any saved events.</p>
             ) : (
-              <EventList events={savedEvents} />
+              <EventList events={savedEvents}  />
             )}
           </div>
           <div className="events__nearby">
@@ -28,6 +30,7 @@ const Event = () => {
           </div>
         </div>
       </div>
+      {showPopup && <EventPopup closePopup={setShowPopup}/>}
     </>
   );
 };
